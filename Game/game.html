@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/game.css">
+    <title>Главная страница</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="top center">
+        <header class="header">
+            <h1 class="title">Добро пожаловать<br> на мой сайт!</h1>
+            <p class="subtitle">Вам предстоит пройти несколько увлекательных игр.<br> Если готов нажимай
+                <strong>поехали</strong> и <strong>приступай</strong>
+            </p>
+            <button class="button_top">Поехали!</button>
+        </header>
+    </div>
+    <section class="box center">
+        <div class="box_game">
+            <div class="box_choice" onclick="getMonth(prompt('Номер месяца'))">
+                <p class="play">Игра 1</p>
+            </div>
+            <div class="box_choice" onclick="getArray()">
+                <p class="play">Игра 2</p>
+            </div>
+            <div class="box_choice"
+                onclick="showAnswer(prompt('Зимой и летом одним цветом.').toLowerCase(), ['елка', 'ель'], ['хвойное дерево', 'наряжают на новый год']);">
+                <p class="play">Игра 3</p>
+            </div>
+        </div>
+    </section>
+    <section class="game_one center">
+        <div class="box_seasons">
+            <h2 class="text">Времена года!</h2>
+            <p class="text_down">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому
+                времени года он относится</p>
+            <button class="choice" onclick="getMonth(prompt('Номер месяца'))">Играть!</button>
+        </div>
+        <div class="controller">
+            <img src="../game/image/gameController.png" alt="#">
+        </div>
+    </section>
+    <section class="game_two center">
+        <div class="game_choice">
+            <img src="../game/image/gaming2.png" alt="#">
+        </div>
+        <div class="box_remember">
+            <h2 class="mind_text">Запомни слова</h2>
+            <p class="mind_down">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо
+                запомнить.</p>
+            <button class="mind_choice" onclick="getArray()">Играть</button>
+        </div>
+    </section>
+    <section class="game_three center">
+        <div class="game_puzzle">
+            <h2 class="text_puzzle">Игра в загадки</h2>
+            <p class="puzzle_send">Компьютер загадывает загадку, вам необходимо ее угадать, если вы дадите не правильный
+                ответ, то компьютер даст вам подсказку. У вас будет три попытки и две подсказки.</p>
+            <button class="button_puzzle"
+                onclick="showAnswer(prompt('Зимой и летом одним цветом.').toLowerCase(), ['елка', 'ель'], ['хвойное дерево', 'наряжают на новый год']);">Играть!</button>
+        </div>
+    </section>
+    <footer class="footer center">Все права защищены</footer>
+    <script src="js/game.js"></script>
+</body>
+
+</html>

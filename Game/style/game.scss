@@ -1,0 +1,198 @@
+@import 'mixin';
+@import 'function';
+@import 'tablet';
+@import 'mobile';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    height: 1024px;
+    background-image: url(../image/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .header {
+        padding-top: 217px;
+
+        .title {
+            padding-bottom: 32px;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 78px;
+            color: $colorTitle;
+        }
+
+        .subtitle {
+            padding-bottom: 44px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 32px;
+            color: $colorTitle;
+        }
+
+        .button_top {
+            @include button;
+
+            &:hover {
+                @include hoverButton;
+            }
+        }
+    }
+}
+
+
+.box {
+    padding-top: 32px;
+    padding-bottom: 120px;
+    background-color: $colorBottom;
+
+    .box_game {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 15px;
+
+        .box_choice {
+            width: 379px;
+            height: 300px;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 32px;
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            color: $colorTitle;
+            border-radius: 16px;
+            transition: all 3s;
+
+            &:nth-of-type(3) {
+                background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(../image/boxOne.jpg);
+            }
+
+            &:nth-of-type(2) {
+                background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(../image/boxTwo.jpg);
+            }
+
+            &:nth-of-type(1) {
+                background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(../image/boxThree.jpg);
+            }
+
+            &:hover {
+                cursor: url(../image/hand.svg) 4 12, auto;
+                transform: scale(1.05);
+                box-shadow: 0 0 7px 7px $colorBorder;
+
+            }
+
+            .play {
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.game_one {
+    @include game;
+
+    .box_seasons {
+        .text {
+            @include text;
+        }
+
+        .text_down {
+            @include text-down;
+        }
+
+        .choice {
+            @include button;
+
+            &:hover {
+                @include hoverButton;
+            }
+        }
+    }
+}
+
+.game_two {
+    @include game;
+
+    .box_remember {
+        .mind_text {
+            @include text;
+        }
+
+        .mind_down {
+            @include text-down;
+        }
+
+        .mind_choice {
+            @include button;
+
+            &:hover {
+                @include hoverButton;
+            }
+        }
+    }
+}
+
+.game_three {
+    display: flex;
+    background: url(../image/bqDown.jpg);
+    padding-bottom: 85px;
+    gap: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    padding-top: 256px;
+
+    .game_puzzle {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        .text_puzzle {
+            @include text;
+        }
+
+        .puzzle_send {
+            @include text-down;
+        }
+
+        .button_puzzle {
+            @include button;
+
+            &:hover {
+                @include hoverButton;
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    color: $colorTitle;
+    background-color: $colorBottom;
+    height: 80px;
+    padding-top: 30px;
+}

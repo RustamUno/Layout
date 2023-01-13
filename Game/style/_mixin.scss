@@ -1,0 +1,47 @@
+@mixin button {
+    border: 1px solid $buttonTop;
+    box-sizing: border-box;
+    background: $buttonTop;
+    color: $colorTitle;
+    padding: 13px 74px;
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 30px;
+    transition: 2s;
+    width: 234px;
+}
+
+@mixin hoverButton {
+    cursor: url(../image/hand.svg) 4 12, auto;
+    background: $buttonHover;
+    transform: scale(1.07);
+    box-shadow: 0 0 8px $colorTitle;
+}
+
+@mixin game {
+    display: flex;
+    background-color: $colorBottom;
+    padding-bottom: 85px;
+    gap: 32px;
+}
+
+@mixin text {
+    padding-bottom: 32px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: $colorTitle
+}
+
+@mixin text-down {
+    padding-bottom: 32px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: $colorTitle;
+}
+
+@mixin box {
+    align-items: center;
+    text-align: center;
+}

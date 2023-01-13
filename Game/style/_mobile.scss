@@ -1,0 +1,43 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top {
+        text-align: center;
+    }
+
+    .box_game {
+        gap: 32px;
+    }
+
+    .game_one {
+        height: 653px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 85px;
+
+        .box_seasons {
+            @include box;
+        }
+    }
+
+    .game_two {
+        height: 653px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+        padding-bottom: 85px;
+
+        .box_remember {
+            @include box;
+        }
+    }
+}
